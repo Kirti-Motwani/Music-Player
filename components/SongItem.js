@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
-import { Platform,View,StyleSheet,Text,Image } from 'react-native';
+import { Platform,View,StyleSheet,Text,Image, TouchableOpacity} from 'react-native';
 import * as GlobalStyles from "../style";
 import Colors from "../constants/Colors";
 import {responsiveFontSize,responsiveWidth,responsiveHeight} from "react-native-responsive-dimensions";
+
 
 export default class SongItem extends Component{
     constructor(props){
@@ -11,17 +12,18 @@ export default class SongItem extends Component{
 
     render(){
         return(
-          <View style={styles.mainContainer}>
+          <TouchableOpacity style={styles.mainContainer} onPress={()=> this.props.songClicked(this.props.song)}>
               <View style={GlobalStyles.styles.songContainer}>
                   <Image source={{uri: this.props.song.thumbnail}}
                          style={GlobalStyles.styles.albumArt}/>
                <View style={GlobalStyles.styles.infoContainer}>
-                   <Text style={GlobalStyles.styles.songTitle}>{this.props.song.title}</Text>
+                   <Text style={(this.props.isActive) ? [GlobalStyles.styles.songTitle,{color: Colors.accentColor}]:
+                       [GlobalStyles.styles.songTitle,{color:Colors.headingColor}]} >{this.props.song.title}</Text>
                    <Text style={GlobalStyles.styles.albumText}>{this.props.song.album} - {this.props.song.artist}</Text>
                </View>
               </View>
               <Text style={styles.durationText}>{this.props.song.duration}</Text>
-          </View>
+          </TouchableOpacity>
         );
     }
 }
