@@ -5,6 +5,7 @@ const SONGS_LIST = [{
     album: "Divide",
     artist: "Ed Sheeran",
     duration: "2:37",
+    genre: "Pop",
     location: "https://cs1.music2k.com/download/20219295/V3RjbnExRWpPeTg5bnJ2L1pncHpEeWZZNEM4a3YvMFk4VWczemZ5SE44c2ViNDZjOWVEdUpwSGRNdFptN2lNVnhpSVVhUFRrTFgwbnQ2NmdaTmNUd1pxS3QwUnNUV1NFQkRnanVQd1NqSEVFTFB5VFJoeGduUFhmUzRiS2FaN08/Ed_Sheeran_Shape_Of_You_(music2k.com).mp3"
 }, {
     id: 2,
@@ -13,6 +14,7 @@ const SONGS_LIST = [{
     album: "Despacito",
     artist: "Luis Fonsi",
     duration: "2:20",
+    genre: "Pop",
     location: "https://cs1.music2k.com/download/20206358/V3RjbnExRWpPeTg5bnJ2L1pncHpEeWZZNEM4a3YvMFk4VWczemZ5SE44dXc0ZWJ4aHI5aG5jMVFnWi9sTkQxYUUwUFQ4ZHdYbndKMmpQaEIyZWRUTGRteFp0K2ZZWjhHQ2NqSjNhWlh1SGVmU2VJU0JxWkhHVStWV2I3YzVTOEI/Luis_Fonsi_feat_Daddy_Yankee_Despacito_(music2k.com).mp3"
 }, {
     id: 3,
@@ -21,6 +23,7 @@ const SONGS_LIST = [{
     album: " High On Life",
     artist: "Martin Garrix",
     duration: "1:58",
+    genre: "Pop",
     location: "https://cs1.music2k.com/download/20332666/V3RjbnExRWpPeTg5bnJ2L1pncHpEeWZZNEM4a3YvMFk4VWczemZ5SE44dlhuL0kvWW1IVy9rWFdCaTBKQk00Q3p2bHZYV1p3U29USklNZ2M5VDhucEJzbklRYkFVeldtSTIrWWx4WHZVZ2l1dVgrNHE2a3V0Yjl4dnBKTG93Ymw/Martin_Garrix_feat_Bonn_High_On_Life_(music2k.com).mp3"
 }, {
     id: 4,
@@ -29,6 +32,7 @@ const SONGS_LIST = [{
     album: "Closer",
     artist: "The ChainSmokers",
     duration: "2:34",
+    genre: "Pop",
     location: "https://cs1.music2k.com/download/20181484/V3RjbnExRWpPeTg5bnJ2L1pncHpEeWZZNEM4a3YvMFk4VWczemZ5SE44c0Y4Y3NHdVJtRHgzeEJxVDhpb0NrV3ZkMDVQbXpWbHR1ZVgzcmd0Nyt6Q2ZWL1VQZlVSNXZtZjI5MkZZL2pXTjZSNFZZamtRVTZvb2pKVTBEN3VDckI/The_Chainsmokers_Closer_feat_Halsey_(music2k.com).mp3"
 }, {
     id: 5,
@@ -37,6 +41,7 @@ const SONGS_LIST = [{
     album: "Faded",
     artist: "Alan Walker",
     duration: "2:04",
+    genre: "Pop",
     location: "https://cs1.music2k.com/download/20172373/V3RjbnExRWpPeTg5bnJ2L1pncHpEeWZZNEM4a3YvMFk4VWczemZ5SE44dUVBV0EwYjRxcVErRzc3WDRSWXUrSHpqK3JXQUkzWFhRNmVhYlZqamtCL1JTYnExUGdBUXlMZzRrY3RId2RVdHJHODlGQ3lMSTFjOVloTWkyeEZJRzU/Alan_Walker_Faded_2016_(music2k.com).mp3"
 }, {
     id: 6,
@@ -45,6 +50,7 @@ const SONGS_LIST = [{
     album: "Mylo Xyloto",
     artist: "ColdPlay",
     duration: "2:34",
+    genre: "Pop",
     location: "https://cs1.music2k.com/download/1228/V3RjbnExRWpPeTg5bnJ2L1pncHpEeWZZNEM4a3YvMFk4VWczemZ5SE44c21yeGVjV3VRZmJ3am80V1JMK3hZVG1yU05pMk9UUWE0ZVpnNk1UdW9ETitPNE1UWFp0b2hXTkE4anNLSER0Z289/Coldplay_Paradise_(music2k.com).mp3"
 }, {
     id: 7,
@@ -53,6 +59,7 @@ const SONGS_LIST = [{
     album: "Perfect - EP",
     artist: "One Direction",
     duration: "1:54",
+    genre: "Pop",
     location: "https://cs1.music2k.com/download/17872132/V3RjbnExRWpPeTg5bnJ2L1pncHpEeWZZNEM4a3YvMFk4VWczemZ5SE44dm5uSTY5WGV1bTNpRHdrZmhRYVlpdWhpa3RZN0pNWUwrU1k4L3ZOak00TVU3by9KZ1B6UDcySzdnc2cyaXAvVmpEaTh3OFpyemFmalJFZ2dIdmtvV20/One_Direction_Perfect_(music2k.com).mp3"
 }, {
     id: 8,
@@ -61,6 +68,7 @@ const SONGS_LIST = [{
     album: "Bekhayali",
     artist: "Sachet Tandon",
     duration: "2:00",
+    genre: "Pop",
     location: "https://cs1.music2k.com/download/20268539/V3RjbnExRWpPeTg5bnJ2L1pncHpEK0xPNlF3dklpeVYrRTA4OW5RSG5wVlV6Q25KeCs2MGowVnd3UHI1djkySldCOFJnRTBqd1NuTVpNVFNmdElGM0U1VjBCWjR3bktRS2RIaVVKYUNiaUJRNEs3bU5CeDNSeElQSktFcTVDTjA/Drake_Gods_Plan_(music2k.com).mp3"
 }];
 

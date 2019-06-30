@@ -22,5 +22,7 @@ export default {
   primaryGradientStart:'#1E2542',
   primaryGradientEnd:'#16162C',
   headingColor: '#fff',
-  greyColor: '#aaa'
+  greyColor: '#aaa',
+  blueColor: '#363b66',
+  lightAccentColor: '#8567CB'
 };

@@ -1,14 +1,16 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import {responsiveHeight,responsiveFontSize} from "react-native-responsive-dimensions";
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-import {MaterialIcons}  from "@expo/vector-icons";
+import {responsiveHeight,responsiveFontSize} from "react-native-responsive-dimensions";
+import {MaterialIcons} from "@expo/vector-icons";
 
 import TabBarIcon from '../components/TabBarIcon';
 import SongsScreen from '../screens/SongsScreen';
-import LinksScreen from '../screens/LinksScreen';
+import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import Colors from "../constants/Colors";
+import  NowPlayingScreen from "../screens/NowPlayingScreen";
+
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -18,13 +20,14 @@ const config = Platform.select({
 const HomeStack = createStackNavigator(
   {
     Home: SongsScreen,
+      NowPlaying: NowPlayingScreen
   },
   config
 );
 
 HomeStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
-   <MaterialIcons name={'music-note'} size={responsiveFontSize(5)} color={Colors.accentColor}/>
+   <MaterialIcons name ={'music-note'} size={responsiveFontSize(4)} color={Colors.accentColor}/>
   ),
 };
 
@@ -32,14 +35,14 @@ HomeStack.path = '';
 
 const LinksStack = createStackNavigator(
   {
-    Links: LinksScreen,
+    Links: SearchScreen,
   },
   config
 );
 
 LinksStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
-    <MaterialIcons name={'search'} size={responsiveFontSize(5)} color={Colors.accentColor}/>
+      <MaterialIcons name ={'search'} size={responsiveFontSize(4)} color={Colors.accentColor}/>
   ),
 };
 
@@ -54,7 +57,7 @@ const SettingsStack = createStackNavigator(
 
 SettingsStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
-      <MaterialIcons name={'person'} size={responsiveFontSize(5)} color={Colors.accentColor}/>
+      <MaterialIcons name ={'person'} size={responsiveFontSize(4)} color={Colors.accentColor}/>
   ),
 };
 
@@ -66,11 +69,11 @@ const tabNavigator = createBottomTabNavigator({
   SettingsStack,
 },{
     tabBarOptions:{
-        showLabel: false,
+        showLabel:false,
         style:{
-            backgroundColor: Colors.primaryColor,
-            height: responsiveHeight(10)
-        },
+            backgroundColor :Colors.primaryColor,
+            height:responsiveHeight(10),
+        }
     }
 });
 
